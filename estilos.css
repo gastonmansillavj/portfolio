@@ -4,7 +4,7 @@ body{
 
 header{
     background-color: blueviolet;
-    width: 500px;
+    width: 30%;
     text-align: center;
     margin-top: 20px;
     margin: 15px auto;
@@ -18,16 +18,16 @@ header{
     background-color: chartreuse;
     display: inline;
     padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 3%;
     border-radius: 15px;
+    
 }
 
 
 
 ul{
     background-color: crimson;
-    padding: 10px;
+    padding: 5%;
 }
 figure{
     margin: 15px;
@@ -35,7 +35,7 @@ figure{
 }
    
 nav{
-    width: 500px;
+    width: 40%;
     text-align: center;
     margin: 15px auto;  
 }
@@ -61,7 +61,7 @@ img{
 
 
 #imagentrio{
-    width: 300px;
+    width: 25%;
     height: 300px;
     margin:  30px 45px; 
     padding: 10px;
