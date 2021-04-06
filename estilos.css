@@ -4,7 +4,7 @@ body{
 
 header{
     background-color: blueviolet;
-    width: 30%;
+    width: 35%;
     text-align: center;
     margin-top: 20px;
     margin: 15px auto;
@@ -62,8 +62,8 @@ img{
 
 
 #imagentrio{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height:200px;
     margin:  5%; 
     padding: 10px;
     background-color: green;
