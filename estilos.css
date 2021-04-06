@@ -51,27 +51,34 @@ img{
     background-color: hotpink;
     text-align: center;
     margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 20px 60px;
     padding: 10px ;
-    height: 350px;
-    
-    
+    height: auto;
+    overflow: hidden;
+    border-radius: 30px;
+          
 }
 
 
 #imagentrio{
     width: 300px;
     height: 300px;
-    margin-left: 100px;
-    margin-top: 15px;
+    margin:  30px 45px; 
     padding: 10px;
     background-color: green;
     float: left;   
+    border: 10px solid yellow;
+    border-radius: 30px;
+}
+
+#trio{
+   
 }
 
 footer{
+    margin-top: 10px;
     background-color: gray;
     height: 150px;
-    clear: both;
+    clear: left;
+
 }
