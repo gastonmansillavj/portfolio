@@ -56,7 +56,7 @@ img{
     padding: 10px ;
     height: auto;
     border-radius: 30px;
-    /*overflow: hidden;*/
+/*se coloca en el box padre para centrar los div automatcamente*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -67,19 +67,17 @@ img{
 
 
 #imagentrio{
+    
     width: 200px;
     height:200px;
     margin:  10px auto; 
     padding: 10px;
-    background-color: green;
-    /*float: left;*/   
+    background-color: green;  
     border: 10px solid yellow;
     border-radius: 30px;
+    
 }
 
-#trio{
-   
-}
 
 footer{
     margin-top: 10px;
