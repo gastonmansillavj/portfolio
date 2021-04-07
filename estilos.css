@@ -48,15 +48,20 @@ img{
     border-radius: 25px;
 }
 
-#integrantes{
+.integrantes{
     background-color: hotpink;
     text-align: center;
     margin-top: 20px;
     margin: 20px 60px;
     padding: 10px ;
     height: auto;
-    overflow: hidden;
     border-radius: 30px;
+    /*overflow: hidden;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
           
 }
 
@@ -64,10 +69,10 @@ img{
 #imagentrio{
     width: 200px;
     height:200px;
-    margin:  5%; 
+    margin:  10px auto; 
     padding: 10px;
     background-color: green;
-    float: left;   
+    /*float: left;*/   
     border: 10px solid yellow;
     border-radius: 30px;
 }
