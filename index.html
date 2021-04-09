@@ -29,7 +29,7 @@
     <section>
       <div id="contenedor">
           <div id="imagen2">
-              <img src="src/imagenes/onePiece2.jpg"/> 
+              <img src="src/imagenes/miFoto.jpg"/> 
           </div> 
       </div>
     </section>
@@ -69,6 +69,7 @@
     <div id = "titulosSection">
       <h3> Proyectos </h3>
     </div>
+   
 
     <section class="integrantes">
 
@@ -86,20 +87,55 @@
 
   <div id = "titulosSection">
     <h3> Trabajos UnRaf </h3>
+
   </div>
 
   <section class="integrantes">
-    
+  
+  
 
-    <div id="imagentrio"> ejercicios </div>
+    <div id="imagentrioEjercicio" > 
+      <h3>Ejercicios suma</h3>
+      <form  >
+        <label for="numero1">ingrese el primer numero</label>
+        <input type="text" id="num1">
+        <label for="numero2">ingrese el segundo numero</label>
+        <input type="text" id="num2">
+        <label for="resultado">resultado</label>
+        <input type="text" id="result">
+        <p></p>
+      </form>
+      <button onclick="Rutina()">Sumar</button>
+      <button onclick="limpiar()">borrar</button>
+
+      <script>
+          function Rutina() {
+              var num1 = parseInt( document.getElementById("num1").value) 
+              var num2 =parseInt ( document.getElementById("num2").value)
+              var result= num1+num2
+              document.getElementById("result").value=result
+          
+          }
+          function limpiar() {
+            document.getElementById("num1").value=""
+            document.getElementById("num2").value=""
+            document.getElementById("result").value=""
+          
+          }
+              
+      </script>
+
+    </div>
+    
   
   </section>
-    
-
+ 
     <footer>
       todos los derechos reservados :54683148
     </footer>
     
+    
+
 </body>
 
 </html>

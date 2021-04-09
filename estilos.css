@@ -123,6 +123,18 @@ img{
     
 }
 
+#imagentrioEjercicio{
+    background-color: rgb(255, 255, 255);  
+    border: 3px solid crimson;
+    box-shadow: grey 7px 7px 7px;
+    width: 200px;
+    height:auto;
+    margin:  10px auto; 
+    padding: 10px;
+    border-radius: 30px;
+    
+}
+
 #titulosSection{
     text-align: center;
     text-shadow: crimson 0px 0px 15px;
