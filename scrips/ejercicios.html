@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- barra de navegacion -->
+        <h1>HIDATE GAMES</h1>
+        <h3>Gastón Mansilla</h3>
+       
+    </header>
+    
+    <nav>
+      <ul>
+        <li id="colorNavegacion"><h3>Inicio</h3></li>
+        <li id="colorNavegacion"><h3>Juegos</h3></li>
+        <li id="colorNavegacion"><h3>Quien soy</h3></li>
+        <li id="colorNavegacion"><h3>Contacto</h3></li>
+      </ul>
+
+    </nav>
+    
+
+    <section class="integrantes">
+  
+        <!--ejercicio suma -->
+      
+          <div id="imagentrioEjercicio" > 
+            <h3>Ejercicios suma</h3>
+            <form  >
+              <label for="numero1"  >Ingrese el primer numero</label>
+              <input type="number" id="num1" width="auto" >
+              <label for="numero2">Ingrese el segundo numero</label>
+              <input type="number" id="num2" width="auto">
+              <label for="resultado" >Resultado</label>
+              <input type="number" id="result" width="auto" readonly>
+              <p></p>
+            </form>
+            <button onclick="Rutina()">Sumar</button>
+            <button onclick="limpiar()">Borrar</button>
+      
+            <script>
+                function Rutina() {
+                    var num1 = parseInt( document.getElementById("num1").value) 
+                    var num2 =parseInt ( document.getElementById("num2").value)
+                    var result= num1+num2
+                    document.getElementById("result").value=result
+                
+                }
+                function limpiar() {
+                  document.getElementById("num1").value=""
+                  document.getElementById("num2").value=""
+                  document.getElementById("result").value=""
+                
+                }
+                    
+            </script>
+      
+            
+      
+          </div>
+           <!--ejercicio suma -->
+
+        <!--ejercicio 2 -->
+        <div id="imagentrioEjercicio" > 
+            <h3>Ejercicios mayor y menor</h3>
+            <form>
+                <label for="mayor" >Mayor</label>
+                <input type="number" id="mayor" width="auto" readonly>
+                <label for="menor" >Menor</label>
+                <input type="number" id="menor" width="auto" readonly>
+                <p></p>
+            </form>
+            <button onclick="MenoryMayor()">Ingresar</button>
+            <button onclick="limpiar()">Borrar</button>
+        
+            <script>
+                function MenoryMayor() {
+                    var num1 = 0 
+                    var mayor= 0
+                    var menor =0
+                    for (let index = 0; index < 4; index++) {
+                        
+                        
+                        if (index === 0) {
+                            num1 =  prompt("ingresa el primer numero")
+                            mayor=num1
+                            menor=num1
+                            }
+
+                        else {
+                                num1 =  prompt("ingresa el primer numero")
+                                    if (num1<menor) {
+                                        menor=num1
+                                        
+                                    }
+                                    if (num1>mayor) {
+                                        mayor=num1
+                                    }       
+                        }
+                    }
+                    document.getElementById("menor").value=menor
+                    document.getElementById("mayor").value=mayor
+                
+                }
+
+
+                function limpiar() {
+                    document.getElementById("mayor").value=""
+                    document.getElementById("menor").value=""
+                    
+                
+                }
+                    
+            </script>
+        
+            
+        
+            </div>
+        <!--ejercicio 2 -->
+
+                <!--ejercicio 3 -->
+                <div id="imagentrioEjercicio" > 
+                    <h3>Repetir Palabra</h3>
+                    <form>
+                        <label for="palabra" > Palabra</label>
+                        <input type="text" id="palabras" width="auto" >
+                        <label for="cantidad" >Cantidad</label>
+                        <input type="number" id="cantidad" width="auto" >
+                        <label for="resultado" >Resultado</label>
+                        <input type="text" id="resultado" width="auto"  readonly>
+                        <p></p>
+                    </form>
+                    <button onclick="repetirPalabras()">Ingresar</button>
+                    <button onclick="limpiarPalabras()">Borrar</button>
+                
+                    <script>
+                        function repetirPalabras() {
+                            var cantidad = parseInt( document.getElementById("cantidad").value)
+                            var palabras = document.getElementById("palabras").value
+                            var resultado = "" 
+
+                            
+                            for (let index = 0; index < cantidad; index++) {
+                                resultado = resultado + palabras
+                                document.getElementById("resultado").value = resultado
+  
+                            }                    
+                        }
+        
+        
+                        function limpiarPalabras() {
+                            document.getElementById("cantidad").value=""
+                            document.getElementById("palabras").value=""
+                            document.getElementById("resultado").value=""
+                            
+                        
+                        }
+                            
+                    </script>
+                
+                    
+                
+                    </div>
+                <!--ejercicio 3 -->
+
+
+
+
+
+
+            
+          
+        
+        </section>
+       
+    
+</body>
+</html>
