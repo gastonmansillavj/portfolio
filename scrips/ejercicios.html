@@ -41,8 +41,8 @@
               <input type="number" id="result" width="auto" readonly>
               <p></p>
             </form>
-            <button onclick="Rutina()">Sumar</button>
-            <button onclick="limpiar()">Borrar</button>
+            <button onclick="Rutina()"> Sumar </button>
+            <button onclick="limpiar()"> Borrar </button>
       
             <script>
                 function Rutina() {
@@ -77,7 +77,7 @@
                 <p></p>
             </form>
             <button onclick="MenoryMayor()">Ingresar</button>
-            <button onclick="limpiar()">Borrar</button>
+            <button onclick="limpiarMayor()">Borrar</button>
         
             <script>
                 function MenoryMayor() {
@@ -110,7 +110,7 @@
                 }
 
 
-                function limpiar() {
+                function limpiarMayor() {
                     document.getElementById("mayor").value=""
                     document.getElementById("menor").value=""
                     
@@ -168,6 +168,46 @@
                 
                     </div>
                 <!--ejercicio 3 -->
+
+                <!--ejercicio 4 -->
+                <div id="imagentrioEjercicio" > 
+                    <h3>Contador de letras</h3>
+                    <form>
+                        <label for="palabra" > Palabra </label>
+                        <input type="text" id="palabraCant" width="auto" >
+                        <label for="cantidad" >Cantidad de letras</label>
+                        <input type="number" id="cantidadLetras" width="auto" readonly>
+                        
+                        <p></p>
+                    </form>
+                    <button onclick="cantidadDeLetras()">contar</button>
+                    <button onclick="limpiarCasillas()">Borrar</button>
+                
+                    <script>
+                        function cantidadDeLetras() {
+                            
+                            var palabraCant =  document.getElementById("palabraCant").value
+                            var cantidad = palabraCant.length
+                            document.getElementById("cantidadLetras").value = cantidad
+                                     
+                        }
+        
+        
+                        function limpiarCasillas() {
+                            document.getElementById("cantidadLetras").value=""
+                            document.getElementById("palabraCant").value=""
+                            
+                            
+                        
+                        }
+                            
+                    </script>
+                
+                    
+                
+                    </div>
+                <!--ejercicio 4 -->
+
 
 
 
