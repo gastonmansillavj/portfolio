@@ -169,7 +169,84 @@
                     </div>
                 <!--ejercicio 3 -->
 
+                    
                 <!--ejercicio 4 -->
+                <div id="imagentrioEjercicio" > 
+                    <h3>convertidor de grados </h3>
+                    <form>
+                        <label for="numero" >grados en c°</label>
+                        <input type="number" id="gradosC" width="auto" onclick="desactivainputF()">
+                        <label for="resultado" >grados en F°</label>
+                        <input type="number" id="gradosF" width="auto" onclick="desactivainputC()" >
+
+                    </form>
+
+                    <button onclick="convertirTemperaturas()">convertir</button>
+                    
+                
+                    <script>
+
+                        function desactivainputC(  ) {
+
+                            var actC = document.getElementById("gradosC") 
+                            var actF = document.getElementById("gradosF") 
+                            actC.disabled=false
+                            actC.value=0
+                            actF.value =""
+
+
+                        }
+
+                        function desactivainputF(  ) {
+                       
+                        var actF = document.getElementById("gradosF")
+                        var actC = document.getElementById("gradosC")
+                            actF.disabled=false
+                            actF.value=0
+                            actC.value =""
+                            
+
+                        }
+                        function convertirTemperaturas() {
+                            var actF = parseInt( document.getElementById("gradosF").value)
+                            var actC = parseInt( document.getElementById("gradosC").value)
+                            var resultadoConversion
+                            if (actF==0) {
+
+                                resultadoConversion = actC*9/5+32;
+                                document.getElementById("gradosF").value = resultadoConversion
+                                console.log(resultadoConversion)
+                               
+                            } else {
+                                resultadoConversion=(actF-32)*5/9;
+                                document.getElementById("gradosC").value =  resultadoConversion
+                                console.log(resultadoConversion)
+                                
+                                
+
+                                
+                            }
+
+
+
+       
+                        }
+        
+        
+                    
+                            
+                    </script>
+                
+                    
+                
+                    </div>
+                <!--ejercicio 4 -->
+
+
+
+
+
+                <!--ejercicio 5 -->
                 <div id="imagentrioEjercicio" > 
                     <h3>Contador de letras</h3>
                     <form>
@@ -206,7 +283,56 @@
                     
                 
                     </div>
-                <!--ejercicio 4 -->
+                <!--ejercicio 5 -->
+
+                
+                <!--ejercicio 6 -->
+                <div id="imagentrioEjercicio" > 
+                    <h3>Numero par e impar </h3>
+                    <form>
+                        <label for="numeroComprobar" > Numero a comprobar </label>
+                        <input type="numbrer" id="numeroAComprobar" width="auto" >
+                        <p></p>
+                        <label for="clasfica" >El numero indicado es</label>
+                        
+                       
+                        <input type="text" id="clasificar" width="auto" readonly>
+
+                    </form>
+                    <button onclick="clasificacionDeNumero()">clasificar</button>
+                    <button onclick="limpiarCasillasClasificacion()">Borrar</button>
+                
+                    <script>
+                        function clasificacionDeNumero() {
+
+                            var numeroAComprobar = parseInt( document.getElementById("numeroAComprobar").value)
+                            
+                            if(numeroAComprobar % 2 == 0) {
+                                document.getElementById("clasificar").value= "par";
+                                }
+                                else {
+                                    document.getElementById("clasificar").value= "impar";
+                                }
+                           
+                           
+                                     
+                        }
+        
+        
+                        function limpiarCasillasClasificacion() {
+                            document.getElementById("clasificar").value=""
+                            document.getElementById("numeroAComprobar").value=""
+                            
+                            
+                        
+                        }
+                            
+                    </script>
+                
+                    
+                
+                    </div>
+                <!--ejercicio 6 -->
 
 
 
