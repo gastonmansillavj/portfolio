@@ -221,29 +221,15 @@
                                 resultadoConversion=(actF-32)*5/9;
                                 document.getElementById("gradosC").value =  resultadoConversion
                                 console.log(resultadoConversion)
-                                
-                                
-
-                                
+      
                             }
 
-
-
-       
                         }
-        
-        
-                    
-                            
+         
                     </script>
-                
-                    
-                
+
                     </div>
                 <!--ejercicio 4 -->
-
-
-
 
 
                 <!--ejercicio 5 -->
@@ -273,15 +259,11 @@
                         function limpiarCasillas() {
                             document.getElementById("cantidadLetras").value=""
                             document.getElementById("palabraCant").value=""
-                            
-                            
-                        
+   
                         }
                             
                     </script>
-                
-                    
-                
+
                     </div>
                 <!--ejercicio 5 -->
 
@@ -293,9 +275,7 @@
                         <label for="numeroComprobar" > Numero a comprobar </label>
                         <input type="numbrer" id="numeroAComprobar" width="auto" >
                         <p></p>
-                        <label for="clasfica" >El numero indicado es</label>
-                        
-                       
+                        <label for="clasfica" >El numero indicado es</label>    
                         <input type="text" id="clasificar" width="auto" readonly>
 
                     </form>
@@ -313,36 +293,68 @@
                                 else {
                                     document.getElementById("clasificar").value= "impar";
                                 }
-                           
-                           
-                                     
+             
                         }
         
         
                         function limpiarCasillasClasificacion() {
                             document.getElementById("clasificar").value=""
                             document.getElementById("numeroAComprobar").value=""
-                            
-                            
-                        
+
                         }
                             
                     </script>
-                
-                    
-                
+
                     </div>
                 <!--ejercicio 6 -->
 
+                  <!--ejercicio 7 -->
+                  <div id="imagentrioEjercicio" > 
+                    <h3>Multiplos de 3 hasta el 20 </h3>
+                    <form>
 
+                        <input type="numbrer" id="Multiplos" width="auto" readonly>
+                        <p></p>
 
+                    </form>
+                    <button onclick="multiplosDe3()">multiplos</button>
+                    <button onclick="limpiarMultiplos()">Borrar</button>
+                
+                    <script>
 
+                        function multiplosDe3() {
+                            var multiplos = 0
+                            var multiploscad = ""
 
-
-
-            
-          
+                            for (let index = 20; index >= 0; index--) {
+                                
+                                if (index % 3 == 0) {
+                                    multiploscad = multiploscad + index.toString()+" ; "
+                                    console.log()
+                                    document.getElementById("Multiplos").value = multiploscad
+                                
+                                }
+                            }   
+                                
+                                
+                                
+                                
+                        }
+                           
         
+                        function limpiarMultiplos() {
+                            document.getElementById("Multiplos").value=""
+                            
+
+                        }
+                    
+                            
+                    </script>
+
+                    </div>
+               
+
+
         </section>
        
     
