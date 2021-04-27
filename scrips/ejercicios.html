@@ -353,7 +353,70 @@
                     </script>
 
                     </div>
-               
+
+
+
+                 <!--ejercicio 8 -->
+                 <div id="imagentrioEjercicio" > 
+                    <h3>numeros primos</h3>
+                    <form>
+                       
+                        <label for="numeroprimo" > Ingrese el número a comprobar  </label>
+                        <p></p>
+                        <input type="numbrer" id="numPrimo" width="auto" >
+                        <p></p>
+                        <label for="numeroprimo" id="lResultado" > resultado  </label>
+                        <p></p>
+
+                    </form>
+                    <button onclick="numerosPrimos()">Analizar</button>
+                    <button onclick="limpiarPrimos()">Borrar</button>
+                
+                    <script>
+
+                        function numerosPrimos() {
+                            var numeroPrimoIngresado = parseInt(document.getElementById("numPrimo").value)
+
+                            let contador = 0
+
+                            for (let index = 0; index <= numeroPrimoIngresado ; index++) {
+                                
+                                
+                                if ((numeroPrimoIngresado % index) == 0) {
+                                   contador=contador+1
+                                
+                                }
+                                
+                            }
+                            if (contador==2) {
+
+                                document.getElementById("lResultado").innerHTML=numeroPrimoIngresado+" es un numero primo"  
+                                
+                            } else {
+
+                                document.getElementById("lResultado").innerHTML=numeroPrimoIngresado+" no es un numero primo"  
+                                
+                            }   
+                                
+                                
+                                
+                                
+                        }
+                           
+        
+                        function limpiarPrimos() {
+
+                            document.getElementById("lResultado").innerHTML= "resultado"
+                            document.getElementById("numPrimo").value=""
+                            
+
+                        }
+                    
+                            
+                    </script>
+
+                    </div>
+               <!--ejercicio 8 -->
 
 
         </section>
