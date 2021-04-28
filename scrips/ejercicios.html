@@ -274,7 +274,7 @@
                     <h3>Numero par e impar </h3>
                     <form>
                         <label for="numeroComprobar" > Numero a comprobar </label>
-                        <input type="numbrer" id="numeroAComprobar" width="auto" >
+                        <input type="number" id="numeroAComprobar" width="auto" >
                         <p></p>
                         <label for="clasfica" >El numero indicado es</label>    
                         <input type="text" id="clasificar" width="auto" readonly>
@@ -314,7 +314,7 @@
                     <h3>Multiplos de 3 hasta el 20 </h3>
                     <form>
 
-                        <input type="numbrer" id="Multiplos" width="auto" readonly>
+                        <input type="number" id="Multiplos" width="auto" readonly>
                         <p></p>
 
                     </form>
@@ -363,7 +363,7 @@
                        
                         <label for="numeroprimo" > Ingrese el número a comprobar  </label>
                         <p></p>
-                        <input type="numbrer" id="numPrimo" width="auto" >
+                        <input type="number" id="numPrimo" width="auto" >
                         <p></p>
                         <label for="numeroprimo" id="lResultado" > resultado  </label>
                         <p></p>
@@ -417,6 +417,55 @@
 
                     </div>
                <!--ejercicio 8 -->
+            
+            
+
+
+                 <!--ejercicio 9 -->
+                 <div id="imagentrioEjercicio" > 
+                    <h3>datos de las persona</h3>
+                    <form>
+                       
+                        <label for="Apellido" >Apellido </label>
+                        <p></p>
+                        <input type="text" id="Apellido" width="auto" >
+                        <p></p>
+                        <label for="Nombre" >Nombre</label>
+                        <p></p>
+                        <input type="text" id="Nombre" width="auto" >
+                        <p></p>
+                        <label for="textResultado" id="textResultado" > resultado  </label>
+                        <p></p>
+
+                    </form>
+                    <button onclick="unirtodo()">Resultado</button>
+                    <button onclick="limpiarPrimos()">Borrar</button>
+                
+                    <script>
+
+                        function unirtodo() {
+
+                            var numeroPrimoIngresado = parseInt(document.getElementById("numPrimo").value)
+                            document.getElementById("textResultado").innerHTML=document.getElementById("Apellido").value +" "+ document.getElementById("Nombre").value
+
+                            
+                            
+                        }
+                           
+        
+                        function limpiarPrimos() {
+
+                            document.getElementById("lResultado").innerHTML= "resultado"
+                            document.getElementById("numPrimo").value=""
+                            
+
+                        }
+                    
+                            
+                    </script>
+
+                    </div>
+               <!--ejercicio 9 -->
 
 
         </section>
