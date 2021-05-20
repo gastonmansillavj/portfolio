@@ -40,6 +40,7 @@ var cursors;
 var score = 0;
 var gameOver = false;
 var scoreText;
+var saltoAct=true;
 
 var game = new Phaser.Game(config);
 
@@ -145,7 +146,7 @@ function create ()
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
     //  Collide the player and the stars with the platforms
-    this.physics.add.collider(player, platforms);
+    
     this.physics.add.collider(stars, platforms);
     this.physics.add.collider(starsRosa, platforms);
     this.physics.add.collider(starsRosa, starsRosa);
@@ -154,12 +155,15 @@ function create ()
     //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
     this.physics.add.overlap(player, starsRosa, collectStarRosa, null, this);
-
     this.physics.add.collider(player, bombs, hitBomb, null, this);
+    this.physics.add.collider(player, platforms , activaSalto, null, this);
+    
 }
 
 function update ()
 {
+    
+
     if (gameOver)
     {
         return;
@@ -183,11 +187,20 @@ function update ()
 
         player.anims.play('turn');
     }
-
-    if (cursors.up.isDown && player.body.touching.down)
+        
+    if (cursors.up.isDown && player.body.touching.down && saltoAct === true)
     {
         player.setVelocityY(-600);
+        saltoAct =false;
+        
     }
+    
+}
+
+function activaSalto(player,platform) {
+    saltoAct = true;
+    
+    
 }
 
 function collectStarRosa (player, starRosa)
