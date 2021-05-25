@@ -19,6 +19,7 @@ var config = {
 var game = new Phaser.Game(config)
 
 var player;
+
 var stars;
 var bombs;
 var platforms;
@@ -32,3 +33,7 @@ var gameOverButton;
 var Piso;
 var KeyR;
 var indicaciones;
+var FxJuntaEstrella;
+var FxJuntaEstrellaChica;
+var FxExplosion;
+var estrella3d;

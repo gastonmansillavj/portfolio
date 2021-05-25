@@ -13,7 +13,7 @@ class Scena3 extends Phaser.Scene {
 
 
     reiniciar() {
-        
+        score = 0;
         this.scene.start('juego');
       }
     
