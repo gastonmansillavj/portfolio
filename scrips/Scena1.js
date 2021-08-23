@@ -6,7 +6,7 @@ class Scena1 extends Phaser.Scene {
 
      preload ()
 
-{
+    {
     this.load.image('sky', '../src/assets/BG.png');
     this.load.image('reset', '../src/assets/botonReset.png');
     this.load.image('logo', '../src/assets/phaser3.png');
@@ -72,22 +72,22 @@ create ()
 
     //  Input Events
     
-    var logo = this.add.image(400, 300, 'logo').setScale(0.5).setTint(0xff0000);;
+    var logo = this.add.image(400, 300, 'logo').setScale(0.5).setTint(0xff0000);
       logo.setInteractive()
       logo.on('pointerdown', () => this.scene.start('juego') );
       
 
-      logo.on('pointerout', function (event) {
+        logo.on('pointerout', function (event) {
 
-        this.setTint(0xff0000);
-        
-    });
+            this.setTint(0xff0000);
+            
+        });
 
-    logo.on('pointerover', function (event) {
+        logo.on('pointerover', function (event) {
 
-        this.clearTint();
+            this.clearTint();
 
-    });
+        });
     
 }
 
